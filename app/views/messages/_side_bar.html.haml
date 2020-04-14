@@ -2,12 +2,12 @@
   .side-bar__user-name
     .innerbox
       .name
-        masa
+        = current_user.name
       .icon
-        =link_to "#", class: "side-bar__btn--edit" do
-          = icon('fas', 'edit')
-        =link_to "#", class: "side-bar__btn--setting" do
-          = icon('fas', 'cog')
+        =link_to do
+          = icon('fas', 'edit', class: 'side-bar__btn--edit')
+        =link_to edit_user_path(current_user)  do
+          = icon('fas', 'cog', class: 'side-bar__btn--setting')
 
   .side-bar__group-list
     .group1
