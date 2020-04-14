@@ -1,31 +1,31 @@
 .chat-main
   .chat-main__group-info
-    .chat-main__group-info__main
-      .chat-main__group-info__group-name
+    .main
+      .group-name
         Group
-      .chat-main__group-info__edit
-        =link_to "Edit", "#", class: "chat-main__btn__btn--edit" 
-    .chat-main__group-info__member
+      .edit
+        =link_to "Edit", "#", class: "chat-main__btn--edit" 
+    .member
       Member: Masa
   .chat-main__message-list
-    .chat-main__message-list__info
-      .chat-main__message-list__user-name
+    .info
+      .user-name
         Masa
-      .chat-main__message-list__date
+      .date
         2020/04/13(Wed) 17:43:01
-    .chat-main__message-list__content
+    .content
       おはよう！
-    .chat-main__message-list__info
-      .chat-main__message-list__user-name
+    .info
+      .user-name
         taka
-      .chat-main__message-list__date
+      .date
         2020/04/13(Wed) 17:45:01
-    .chat-main__message-list__content
+    .content
       おはよう！!
   .chat-main__message-form
-    .chat-main__message-form-box
-      %input.message-form-box__text{placeholder: "type a message"}
-      %label{class: "message-form-box__image"}
+    .form-box
+      %input.text{placeholder: "type a message"}
+      %label{class: "message-image"}
         = icon( 'fas', 'image')
         %input{type: "file"}
-    %input.message-form-box__btn{type: "submit", value: "Send"}
+    %input.send-btn{type: "submit", value: "Send"}

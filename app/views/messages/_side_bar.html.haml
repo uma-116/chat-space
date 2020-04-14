@@ -1,23 +1,23 @@
 .side-bar
   .side-bar__user-name
-    .side-bar__user-name-innerbox
-      .side-bar__user-name-name
+    .innerbox
+      .name
         masa
-      .side-bar__user-name-icon
-        =link_to "#", class: "side-bar__btn__btn--edit" do
+      .icon
+        =link_to "#", class: "side-bar__btn--edit" do
           = icon('fas', 'edit')
-        =link_to "#", class: "side-bar__btn__btn--setting" do
+        =link_to "#", class: "side-bar__btn--setting" do
           = icon('fas', 'cog')
 
   .side-bar__group-list
-    .side-bar__group-list--group1
-      .group_name
+    .group1
+      .group-name
         techcamp
-      .new_message
+      .new-message
         まだメッセージはありません
-      .group_name
+      .group-name
         ２つめ
-      .new_message
+      .new-message
         ２つめ
 
 
