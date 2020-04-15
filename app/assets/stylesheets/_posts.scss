@@ -37,16 +37,16 @@
       height: calc(100vh - 100px);
       background-color: #2f3e51;
       
-          .group1 {
+          .group {
            padding-top: 20px;
            padding-left: 20px;
            color: #ffffff;
-            .group-name {
+            .group__name {
               font-size: 15px;
               color: #ffffff;
               margin-bottom: 5px;
             }
-            .new-message {
+            .group__message {
               font-size: 11px;
               margin-bottom: 40px;
             }
