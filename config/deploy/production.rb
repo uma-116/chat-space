@@ -1,5 +1,4 @@
-server '18.181.94.225', user: 'ec2-user', roles: %{app db web}
-
+server '18.181.94.225', user: 'ec2-user', roles: %w{app db web}
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
@@ -44,7 +43,7 @@ server '18.181.94.225', user: 'ec2-user', roles: %{app db web}
 # Global options
 # --------------
 #  set :ssh_options, {
-#    keys: %w(/home/user_name/.ssh/id_rsa),
+#    keys: %w(/home/rlisowski/.ssh/id_rsa),
 #    forward_agent: false,
 #    auth_methods: %w(password)
 #  }
