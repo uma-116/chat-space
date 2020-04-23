@@ -1,6 +1,6 @@
 # config valid only for current version of Capistrano
 # capistranoのバージョンを記載。固定のバージョンを利用し続け、バージョン変更によるトラブルを防止する
-lock '3.13.0'
+lock '3.12.0'
 
 # Capistranoのログの表示に利用する
 set :application, 'chat-space'
@@ -26,9 +26,10 @@ set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 set :keep_releases, 5
 
 # デプロイ処理が終わった後、Unicornを再起動するための記述
-after 'deploy:publishing', 'deploy:restart'
+after "deploy:publishing", "deploy:restart"
 namespace :deploy do
   task :restart do
-    invoke 'unicorn:restart'
+    invoke "unicorn:stop"
+    invoke "unicorn:start"
   end
 end
